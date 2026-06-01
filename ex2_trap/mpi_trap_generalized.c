@@ -1,3 +1,7 @@
+/*
+ * Compile: mpicc -O2 -Wall -o mpi_psum mpi_psum.c
+ * Run:     mpiexec -n 4 ./mpi_psum
+*/
 
 #include <stdio.h>
 #include <mpi.h>
