@@ -1,15 +1,7 @@
-/* mpi_hello.c
- * Module 3, Class 5 -- MPI Hello World
- *
- * Each process (rank > 0) sends a greeting to process 0.
- * Process 0 prints its own greeting and then collects/prints all others.
- *
- * Compile: mpicc -g -Wall -o mpi_hello mpi_hello.c
- * Run:     mpiexec -n 4 ./mpi_hello
- *
- * Reference: Pacheco & Malensek, "An Introduction to Parallel Programming",
- *            2nd ed., Program 3.1.
- */
+/*
+ * Compile: mpicc -O2 -Wall -o hello_os hello_os.c
+ * Run:     mpiexec -n 4 ./hello_os
+*/
 
 #define _GNU_SOURCE
 #include <stdio.h>

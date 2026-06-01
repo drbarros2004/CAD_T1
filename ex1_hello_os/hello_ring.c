@@ -1,7 +1,7 @@
 /* 
  * Compile: mpicc -g -Wall -o hello_ring hello_ring.c
  * Run:     mpiexec -n 8 ./hello_ring
- */
+*/
 
 #define _GNU_SOURCE
 #include <stdio.h>
