@@ -50,9 +50,20 @@ int main(void) {
                z, local_n, MPI_DOUBLE, 0, MPI_COMM_WORLD);
 
     if (my_rank == 0) {
+        int success = 1;
         printf("z = x + y:\n");
-        for (int i = 0; i < N; i++)
+        for (int i = 0; i < N; i++) {
             printf("  z[%2d] = %g\n", i, z[i]);
+            if (z[i] != x[i] + y[i]) {
+                success = 0;
+                break;
+            }
+        }
+        
+        if (!success) {
+            printf("Validation error: serial result is different from parallel result. \n");
+        }
+
         free(x); free(y); free(z);
     }
 
