@@ -4,7 +4,7 @@ LDFLAGS = -lm
 
 all: mpi_psum 
 
-mpi_trap_generalized: mpi_psum.c
+mpi_psum: mpi_psum.c
 	$(CC) $(CFLAGS) -o mpi_psum mpi_psum.c $(LDFLAGS)
 
 run: all
